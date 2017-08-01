@@ -23,8 +23,21 @@ module.exports = function(grunt) {
 		    paths: ['assets/css']
 		},
 		files: {
-		    'assets/css/BzFTMxc.min.css': 'src/less/**.less'
+		    'assets/css/BzFTMxc.css': ['src/less/*.less',
+					       'Bootstrap-3.0-Grid-Only/*.less']
 		}
+	    }
+	},
+
+	cssmin: {
+	    target: {
+		files: [{
+		    expand: true,
+		    cwd: 'assets/css',
+		    src: ['*.css', '!*.min.css'],
+		    dest: 'assets/css',
+		    ext: '.min.css'
+		}]
 	    }
 	},
 
@@ -66,7 +79,7 @@ module.exports = function(grunt) {
 	    },
 	    less: {
 		files: ['src/less/**.less'],
-		tasks: ['less'],
+		tasks: ['less', 'cssmin'],
 		options: {
 		    spawn: false,
 		},
@@ -89,11 +102,12 @@ module.exports = function(grunt) {
 	
     });
     
-    grunt.registerTask('default', ['pug', 'less', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['pug', 'less', 'cssmin', 'uglify', 'imagemin', 'watch']);
 
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 };
