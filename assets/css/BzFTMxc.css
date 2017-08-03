@@ -5,6 +5,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
+.wrapper {
+  float: left;
+  width: 100%;
+}
 
 
 
