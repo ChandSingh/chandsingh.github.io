@@ -23,8 +23,7 @@ module.exports = function(grunt) {
 		    paths: ['assets/css']
 		},
 		files: {
-		    'assets/css/BzFTMxc.css': ['src/less/*.less',
-					       'Bootstrap-3.0-Grid-Only/*.less']
+		    'assets/css/BzFTMxc.css': ['src/less/**.less']
 		}
 	    }
 	},
