@@ -1,16 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Raleway+Dots');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 /**
  *  font-family: 'Raleway Dots', cursive;
  *  font-family: 'Raleway', sans-serif;
  **/
+* {
+  padding: 0px;
+  margin: 0px;
+}
 html,
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  background: #FFF;
+  color: #000;
 }
 .wrapper {
   float: left;
   width: 100%;
 }
-#whoami {
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+.text-center {
   text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+#timeline {
+  background: linear-gradient(30deg, #539, #395);
+  color: #FFF;
+}
+.timeline {
+  float: left;
+  width: 100%;
+}
+.timeline .block {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  min-height: 150px;
+}
+.timeline .block::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 90%;
+  margin: 0px auto;
+  top: 16px;
+  left: 0;
+  right: 0;
+  background: none;
+  border-right: solid 2px #FFF;
+  opacity: .7;
+}
+.timeline .block.dotted::before {
+  border-right: dotted 2px #FFF;
+}
+.timeline .block.dashed::before {
+  border-right: dashed 2px #FFF;
+}
+.timeline .block::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  background: none;
+  border: solid 4px #FFF;
+  border-radius: 50%;
 }

@@ -61,9 +61,9 @@ module.exports = function(grunt) {
 		},
 		files: [{
 		    expand: true,
-		    cwd: 'src/images/',
+		    cwd: 'src/img/',
 		    src: ['**/*.{png,jpg,gif}'],
-		    dest: 'assets/images/'
+		    dest: 'assets/img/'
 		}]
 	    }
 	},
@@ -109,4 +109,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+
 };
