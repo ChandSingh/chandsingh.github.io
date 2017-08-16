@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-/**
- *  font-family: 'Raleway Dots', cursive;
- *  font-family: 'Raleway', sans-serif;
- **/
+@import 'src/less/BzFTMxc-theme.less';
 
-@background: #FFF;
-@text: #000;
-
-*{
+body, h1, h2, h3, h4, h5, h6, ul, li{
     padding: 0px;
     margin: 0px;
 }
 
 html, body{
-    font-family: 'Raleway', 'Arial', sans-serif;
+    font-family: @font;
     background: @background;
     color: @text;
 }
@@ -41,9 +34,67 @@ html, body{
     text-align: right;
 }
 
+.skew{
+    display: inline-block;
+    transform: skew(-20deg, 0deg);
+
+    .unskew{
+	display: inline-block;
+	transform: skew(20deg, 0deg);
+    }
+}
+
+#whoami{
+    text-align: center;
+
+    img.portrait{
+	margin: 0% 30%;
+	width: 40%;
+    }
+
+    .greeting{
+
+	.highlight{
+	    background: #000;
+	    color: #FFF;
+	    padding-left: 18px;
+	    padding-right: 18px;
+	    margin: 0px 10px;
+	    font-weight: 600;
+	}
+	
+	h3{
+	    font-weight: 300;
+	    font-size: 3em;
+	}
+	
+	h1{
+	    font-weight: 300;
+	    font-size: 5em;
+	}
+	
+    }
+
+    .highlights{
+
+	margin: 20px 0px;
+	
+	.highlight{
+	    padding: 5px 15px;
+	    margin: 0px 8px;
+	    background: #EEE;
+	    color: #000;
+	    font-weight: 400;
+	    font-size: 0.9em;
+	}
+    }
+    
+}
+
 #timeline{
-    background: linear-gradient(30deg, #539, #395);
-    color: #FFF;
+    background: @timeline-background;
+    color: @timeline-text;
+    padding-top: 50px;
 }
 
 .timeline{
@@ -56,26 +107,30 @@ html, body{
 	top: 0%;
 	left: 0%;
 	width: 100%;
-	min-height: 150px;
+	height: 150px;
+
+	&.short{
+	    height: 100px;
+	}
 
 	&::before{
 	    content: '';
 	    position: absolute;
 	    width: 0%;
-	    height: 90%;
+	    height: 88%;
 	    margin: 0px auto;
 	    top: 16px;
 	    left: 0;
 	    right: 0;
 	    background: none;
-	    border-right: solid 2px #FFF;
+	    border-right: dotted 2px @timeline-line-color;
 	    opacity: .7;
 	} 
-	&.dotted::before{
-	    border-right: dotted 2px #FFF;
+	&.solid::before{
+	    border-right: solid 2px @timeline-line-color;
 	}
 	&.dashed::before{
-	    border-right: dashed 2px #FFF;
+	    border-right: dashed 2px @timeline-line-color;
 	}
 
 	&::after{
@@ -88,8 +143,113 @@ html, body{
 	    left: 0;
 	    right: 0;
 	    background: none;
-	    border: solid 4px #FFF;
+	    border: solid 4px @timeline-point-color;
 	    border-radius: 50%;
+	}
+	&.solid::after{
+	    background: @timeline-point-color;
+	}
+
+	.left{
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 47%;
+	    padding-right: 3%;
+	    text-align: right;
+	    .time{
+		text-align: right;
+	    }
+	    .image{
+		img{
+		    float: right;
+		}
+	    }
+	    .content{
+		text-align: right;
+
+		ul.skills{
+		    li{
+			float: right;
+		    }
+		}
+	    }
+	}
+
+	.right{
+	    position: absolute;
+	    top: 0;
+	    left: 50%;
+	    width: 47%;
+	    padding-left: 3%;
+	    text-align: left;
+	    .time{
+		text-align: left;
+	    }
+	    .image{
+		img{
+		    float: left;
+		}
+	    }
+	    .content{
+		text-align: left;
+
+		ul.skills{
+		    li{
+			float: left;
+		    }
+		}
+	    }
+	}
+
+	.time{
+	    float: left;
+	    width: 100%;
+	    margin-bottom: 10px;
+	    font-weight: 600;
+	    font-style: italic;
+	}
+
+	.content{
+	    float: left;
+	    width: 100%;
+	    font-size: 0.95em;
+
+	    h3 {
+		font-weight: 300;
+		font-style: italic;
+	    }
+
+	    a{
+		font-size: 10pt;
+		color: lighten(@text, 50%);
+		text-decoration: none;
+		
+		&:hover{
+		    color: lighten(@text, 20%);
+		    text-decoration: underline;
+		}
+	    }
+
+	    p{
+		margin: 10px 0px;
+		color: lighten(@text, 30%);
+	    }
+
+	    ul.skills{
+		float: left;
+		width: 100%;
+		list-style: none;
+
+		li{
+		    font-weight: 300;
+		    font-size: 0.8em;
+		    padding: 3px 8px;
+		    margin: 3px 5px;
+		    background: #EEE;
+		}
+	    }
+
 	}
 	
     }

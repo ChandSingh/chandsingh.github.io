@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 		    paths: ['assets/css']
 		},
 		files: {
-		    'assets/css/BzFTMxc.css': ['src/less/**.less']
+		    'assets/css/BzFTMxc.css': ['src/less/BzFTMxc.less']
 		}
 	    }
 	},
