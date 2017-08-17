@@ -191,6 +191,10 @@ body {
   font-weight: 300;
   font-style: italic;
 }
+.timeline .block .content strong {
+  font-weight: 300;
+  display: block;
+}
 .timeline .block .content a {
   font-size: 10pt;
   color: #808080;
