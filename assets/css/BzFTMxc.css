@@ -20,6 +20,7 @@ body {
   font-family: 'Raleway', 'Arial', sans-serif;
   background: #FFF;
   color: #000;
+  font-size: 11pt;
 }
 .wrapper {
   float: left;
@@ -39,6 +40,12 @@ body {
 .text-right {
   text-align: right;
 }
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
 .skew {
   display: inline-block;
   transform: skew(-20deg, 0deg);
@@ -47,12 +54,14 @@ body {
   display: inline-block;
   transform: skew(20deg, 0deg);
 }
-#whoami {
-  text-align: center;
-}
 #whoami img.portrait {
   margin: 0% 35%;
   width: 30%;
+}
+#whoami .greeting {
+  float: left;
+  width: 100%;
+  text-align: center;
 }
 #whoami .greeting .highlight {
   background: #000;
@@ -64,14 +73,17 @@ body {
 }
 #whoami .greeting h3 {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 24pt;
 }
 #whoami .greeting h1 {
   font-weight: 300;
-  font-size: 4em;
+  font-size: 48pt;
 }
 #whoami .highlights {
-  margin: 20px 0px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0px;
 }
 #whoami .highlights .highlight {
   padding: 5px 15px;
@@ -79,20 +91,23 @@ body {
   background: #EEE;
   color: #000;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 10pt;
 }
 #whoami .links {
-  margin: 10px 0px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0px;
 }
 #whoami .links a {
-  font-size: 0.75em;
+  font-size: 9pt;
   line-height: 20px;
   text-decoration: none;
   color: #666666;
   margin: 0px 10px;
 }
 #whoami .links a img {
-  height: 20px;
+  height: 13px;
   margin-right: 5px;
 }
 #whoami .links a:hover {
@@ -102,7 +117,7 @@ body {
 #timeline {
   background: #FFF;
   color: #000;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .timeline {
   float: left;
@@ -113,10 +128,13 @@ body {
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 170px;
+  height: 140px;
 }
 .timeline .block.short {
   height: 100px;
+}
+.timeline .block.large {
+  height: 350px;
 }
 .timeline .block::before {
   content: '';
@@ -130,6 +148,9 @@ body {
   background: none;
   border-right: dotted 2px #333333;
   opacity: .7;
+}
+.timeline .block.large::before {
+  height: 95%;
 }
 .timeline .block.solid::before {
   border-right: solid 2px #333333;
@@ -170,7 +191,7 @@ body {
 .timeline .block .left .content {
   text-align: right;
 }
-.timeline .block .left .content ul.skills li {
+.timeline .block .left ul li {
   float: right;
 }
 .timeline .block .right {
@@ -190,7 +211,7 @@ body {
 .timeline .block .right .content {
   text-align: left;
 }
-.timeline .block .right .content ul.skills li {
+.timeline .block .right ul li {
   float: left;
 }
 .timeline .block .time {
@@ -237,4 +258,28 @@ body {
   padding: 3px 8px;
   margin: 3px 5px;
   background: #EEE;
+}
+.section {
+  float: left;
+  width: 100%;
+  margin: 20px 0px;
+}
+.section .title {
+  font-weight: 600;
+}
+.section .sub-section {
+  float: left;
+  width: 100%;
+  margin: 10px 0px;
+}
+.section .sub-section .title {
+  font-weight: 400;
+  font-style: italic;
+}
+.section ul.technologies {
+  list-style: none;
+  margin: 5px 0px;
+}
+.section ul.technologies li {
+  margin: 0px 5px;
 }

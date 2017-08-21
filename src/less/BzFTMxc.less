@@ -9,6 +9,7 @@ html, body{
     font-family: @font;
     background: @background;
     color: @text;
+    font-size: 11pt;
 }
 
 .wrapper{
@@ -34,6 +35,12 @@ html, body{
     text-align: right;
 }
 
+@media print{
+    .no-print, .no-print *{
+	display: none !important;
+    }
+}
+
 .skew{
     display: inline-block;
     transform: skew(-20deg, 0deg);
@@ -45,7 +52,6 @@ html, body{
 }
 
 #whoami{
-    text-align: center;
 
     img.portrait{
 	margin: 0% 35%;
@@ -53,6 +59,9 @@ html, body{
     }
 
     .greeting{
+	float: left;
+	width: 100%;
+	text-align: center;
 
 	.highlight{
 	    background: #000;
@@ -65,19 +74,21 @@ html, body{
 	
 	h3{
 	    font-weight: 300;
-	    font-size: 2em;
+	    font-size: 24pt;
 	}
 	
 	h1{
 	    font-weight: 300;
-	    font-size: 4em;
+	    font-size: 48pt;
 	}
 	
     }
 
     .highlights{
-
-	margin: 20px 0px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0px;
 	
 	.highlight{
 	    padding: 5px 15px;
@@ -85,22 +96,25 @@ html, body{
 	    background: #EEE;
 	    color: #000;
 	    font-weight: 400;
-	    font-size: 0.9em;
+	    font-size: 10pt;
 	}
     }
 
     .links{
-	margin: 10px 0px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0px;
 	
 	a{
-	    font-size: 0.75em;
+	    font-size: 9pt;
 	    line-height: 20px;
 	    text-decoration: none;
 	    color: lighten(@text, 40%);
 	    margin: 0px 10px;
 
 	    img{
-		height: 20px;
+		height: 13px;
 		margin-right: 5px;
 	    }
 
@@ -116,23 +130,28 @@ html, body{
 #timeline{
     background: @timeline-background;
     color: @timeline-text;
-    padding-top: 50px;
+    padding-top: 30px;
 }
+
 
 .timeline{
 
     float: left;
     width: 100%;
-
+    
     .block{
 	position: relative;
 	top: 0%;
 	left: 0%;
 	width: 100%;
-	height: 170px;
+	height: 140px;
 
 	&.short{
 	    height: 100px;
+	}
+
+	&.large{
+	    height: 350px;
 	}
 
 	&::before{
@@ -147,10 +166,16 @@ html, body{
 	    background: none;
 	    border-right: dotted 2px @timeline-line-color;
 	    opacity: .7;
-	} 
+	}
+
+	&.large::before{
+	    height: 95%;
+	}
+
 	&.solid::before{
 	    border-right: solid 2px @timeline-line-color;
 	}
+
 	&.dashed::before{
 	    border-right: dashed 2px @timeline-line-color;
 	}
@@ -168,6 +193,7 @@ html, body{
 	    border: solid 4px @timeline-point-color;
 	    border-radius: 50%;
 	}
+
 	&.solid::after{
 	    background: @timeline-point-color;
 	}
@@ -189,11 +215,10 @@ html, body{
 	    }
 	    .content{
 		text-align: right;
-
-		ul.skills{
-		    li{
-			float: right;
-		    }
+	    }
+	    ul{
+		li{
+		    float: right;
 		}
 	    }
 	}
@@ -215,11 +240,10 @@ html, body{
 	    }
 	    .content{
 		text-align: left;
-
-		ul.skills{
-		    li{
-			float: left;
-		    }
+	    }
+	    ul{
+		li{
+		    float: left;
 		}
 	    }
 	}
@@ -281,4 +305,34 @@ html, body{
 	
     }
    
+}
+
+.section{
+    float: left;
+    width: 100%;
+    margin: 20px 0px;
+
+    .title{
+	font-weight: 600;
+    }
+    
+    .sub-section{
+	float: left;
+	width: 100%;
+	margin: 10px 0px;
+
+	.title{
+	    font-weight: 400;
+	    font-style: italic;
+	}
+    }
+
+    ul.technologies{
+	list-style: none;
+	margin: 5px 0px;
+
+	li{
+	    margin: 0px 5px;
+	}
+    }
 }
