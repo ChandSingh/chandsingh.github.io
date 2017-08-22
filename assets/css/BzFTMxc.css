@@ -262,7 +262,12 @@ body {
 .section {
   float: left;
   width: 100%;
-  margin: 15px 0px;
+  margin: 20px 0px;
+}
+@media print {
+  .section {
+    margin: 10px 0px;
+  }
 }
 .section .title {
   font-weight: 600;
@@ -270,12 +275,13 @@ body {
 .section .sub-section {
   float: left;
   width: 100%;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 .section .sub-section .title {
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
-  font-size: 10pt;
+  font-size: 9pt;
+  color: #000;
 }
 .section ul.technologies {
   list-style: none;
@@ -284,15 +290,95 @@ body {
 .section ul.technologies li {
   margin: 3px 5px;
   font-size: 8pt;
-  background: #EEE;
-  color: #000;
+  background: #F7F7F7;
+  color: #333;
   padding: 3px 8px;
 }
 .section ul.technologies li.int {
-  background: #666;
-  color: #FFF;
+  background: #EEE;
+  color: #111;
 }
 .section ul.technologies li.pro {
-  background: #222;
-  color: #FFF;
+  background: #DDD;
+  color: #000;
+}
+ul.journey {
+  list-style: none;
+  float: left;
+  width: 100%;
+}
+ul.journey li {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+ul.journey li::before {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 0;
+  width: 30%;
+  height: 0;
+  border-bottom: 1px #CCC dotted;
+  z-index: 0;
+}
+ul.journey li:first-child::before {
+  border-bottom: 1px #CCC dashed;
+}
+ul.journey li::after {
+  position: absolute;
+  content: '';
+  top: 40%;
+  right: 0;
+  width: 30%;
+  height: 0;
+  border-bottom: 1px #CCC dotted;
+  z-index: 0;
+}
+ul.journey li:last-child::before {
+  position: absolute;
+  content: '';
+  top: 35%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #333;
+}
+ul.journey li:last-child::after {
+  position: absolute;
+  content: '';
+  top: 35%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #999;
+}
+ul.journey li .milestone {
+  float: left;
+  width: 100%;
+  padding: 0%;
+  text-align: center;
+}
+ul.journey li .milestone .image {
+  float: left;
+  width: 40%;
+  margin: 5% 30%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  border-radius: 50%;
+}
+ul.journey li .milestone b {
+  font-weight: 300;
+  font-size: 9pt;
+  color: #777;
+}
+@media print {
+  ul.journey li .milestone b {
+    font-size: 8pt;
+  }
 }
