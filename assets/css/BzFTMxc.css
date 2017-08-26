@@ -54,6 +54,11 @@ body {
   display: inline-block;
   transform: skew(20deg, 0deg);
 }
+.highlight {
+  background: #000;
+  color: #FFF;
+  padding: 3px 12px;
+}
 #whoami img.portrait {
   margin: 0% 35%;
   width: 30%;
@@ -128,7 +133,7 @@ body {
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 140px;
+  height: 135px;
 }
 .timeline .block.short {
   height: 100px;
@@ -262,7 +267,7 @@ body {
 .section {
   float: left;
   width: 100%;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 @media print {
   .section {
@@ -381,4 +386,67 @@ ul.journey li .milestone b {
   ul.journey li .milestone b {
     font-size: 8pt;
   }
+}
+ul.education {
+  list-style: none;
+  float: left;
+  width: 100%;
+  padding: 5px 0px;
+}
+ul.education li {
+  float: left;
+  width: 100%;
+  padding: 10px 0px;
+}
+ul.education .learning {
+  float: left;
+  width: 100%;
+}
+ul.education .learning .year {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 10pt;
+}
+ul.education .learning .course {
+  font-size: 11pt;
+  font-weight: 100;
+  font-style: italic;
+  color: #333;
+  margin: 2px 0px;
+}
+ul.education .learning .course .field {
+  color: #555;
+}
+ul.education .learning .institution {
+  font-size: 9pt;
+  color: #777;
+  font-weight: 100;
+}
+div#interests {
+  float: left;
+  width: 50%;
+}
+ul.interests {
+  list-style: none;
+  margin: 50px 0px;
+}
+ul.interests li {
+  float: left !important;
+  margin: 3px 5px;
+  font-size: 9pt;
+  background: #F7F7F7;
+  color: #333;
+  padding: 3px 8px;
+}
+ul.interests li.int {
+  background: #EEE;
+  color: #111;
+}
+ul.interests li.pro {
+  background: #DDD;
+  color: #000;
+}
+div#interests-chart {
+  float: left;
+  width: 50%;
 }
