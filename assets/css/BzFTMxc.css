@@ -20,7 +20,7 @@ body {
   font-family: 'Raleway', 'Arial', sans-serif;
   background: #FFF;
   color: #000;
-  font-size: 11pt;
+  font-size: 10pt;
 }
 .wrapper {
   float: left;
@@ -30,6 +30,11 @@ body {
   width: 100%;
   max-width: 1100px;
   margin: 0px auto;
+}
+.space {
+  float: left;
+  width: 100%;
+  padding: 15px 0px;
 }
 .text-center {
   text-align: center;
@@ -60,8 +65,8 @@ body {
   padding: 3px 12px;
 }
 #whoami img.portrait {
-  margin: 0% 35%;
-  width: 30%;
+  margin: 0% 37.5%;
+  width: 25%;
 }
 #whoami .greeting {
   float: left;
@@ -82,7 +87,7 @@ body {
 }
 #whoami .greeting h1 {
   font-weight: 300;
-  font-size: 48pt;
+  font-size: 42pt;
 }
 #whoami .highlights {
   float: left;
@@ -139,7 +144,7 @@ body {
   height: 100px;
 }
 .timeline .block.large {
-  height: 520px;
+  height: 550px;
 }
 .timeline .block::before {
   content: '';
@@ -276,11 +281,12 @@ body {
 }
 .section .title {
   font-weight: 600;
+  margin-bottom: 5px;
 }
 .section .sub-section {
   float: left;
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 .section .sub-section .title {
   font-weight: 400;
@@ -449,4 +455,34 @@ ul.interests li.pro {
 div#interests-chart {
   float: left;
   width: 50%;
+}
+#footer {
+  float: left;
+  width: 100%;
+  margin-top: 5%;
+  padding: 5px 0px;
+  padding-top: 10px;
+  border-top: 1px #DDD solid;
+  text-align: center;
+}
+#footer .quote {
+  float: left;
+  width: 100%;
+  font-size: 11pt;
+  color: #555;
+  font-weight: 400;
+  font-style: italic;
+}
+#footer .quote::before,
+#footer .quote::after {
+  content: '"';
+  font-size: 18pt;
+  padding: 0px 10px;
+}
+#footer .note {
+  float: left;
+  width: 100%;
+  font-size: 7pt;
+  padding: 5px 0px;
+  text-align: right;
 }

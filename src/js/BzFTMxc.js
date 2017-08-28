@@ -1,4 +1,4 @@
-// BzFTMxc.js
+ // BzFTMxc.js
 
 
 (function(_W, _D){
@@ -108,14 +108,34 @@
 
 	}, function callback(chart) {
 
-	    // @TODO: Make text translate dynamic.
-	    
+	    var getCoordinates = function(_chart, _x, _y){
+		var _cW = chart.chartWidth;
+		var _cH = chart.chartHeight;
+		var _dia = _cW > _cH ? _cH : _cW;
+		var _rad = _dia / 2;
+		var _cenX = _cW / 2;
+		var _cenY = _cH / 2;
+		// Calculate coordinates
+		var x = _cenX + (parseFloat(_x) / 100 * _rad);
+		var y = _cenY + (parseFloat(_y) / 100 * _rad);
+		return [x,y];
+	    };
+
+	    var _pos1 = getCoordinates(chart, '-70%', '-75.0%');
+	    var _pos2 = getCoordinates(chart, '-70%', '-62%');
+	    var _pos3 = getCoordinates(chart, '-81.5%', '-51%');
+
+	    var _fontSize = Math.abs(Math.abs(_pos1[1] - _pos2[1]) - 2) + 'px';
+
 	    this.renderer.text('Blockchain')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
 		})
-		.translate(55, 27)
+		.css({
+		    'font-size': _fontSize
+		})
+		.translate(_pos1[0], _pos1[1])
 		.add(this.series[0].group);
 
 	    this.renderer.text('Blockchain')
@@ -123,15 +143,21 @@
 		    'stroke-width': 1,
 		    'zIndex': 10
 		})
-		.translate(55, 40)
+		.css({
+		    'font-size': _fontSize
+		})
+		.translate(_pos2[0], _pos2[1])
 		.add(this.series[0].group);
-	    
+
 	    this.renderer.text('Development')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
 		})
-		.translate(42, 53)
+		.css({
+		    'font-size': _fontSize
+		})
+		.translate(_pos3[0], _pos3[1])
 		.add(this.series[0].group);
 	    
 	});

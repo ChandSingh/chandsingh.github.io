@@ -9,7 +9,7 @@ html, body{
     font-family: @font;
     background: @background;
     color: @text;
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 .wrapper{
@@ -21,6 +21,12 @@ html, body{
     width: 100%;
     max-width: 1100px;
     margin: 0px auto;
+}
+
+.space{
+    float: left;
+    width: 100%;
+    padding: 15px 0px;
 }
 
 .text-center{
@@ -60,8 +66,8 @@ html, body{
 #whoami{
 
     img.portrait{
-	margin: 0% 35%;
-	width: 30%;
+	margin: 0% 37.5%;
+	width: 25%;
     }
 
     .greeting{
@@ -85,7 +91,7 @@ html, body{
 	
 	h1{
 	    font-weight: 300;
-	    font-size: 48pt;
+	    font-size: 42pt;
 	}
 	
     }
@@ -157,7 +163,7 @@ html, body{
 	}
 
 	&.large{
-	    height: 520px;
+	    height: 550px;
 	}
 
 	&::before{
@@ -324,12 +330,13 @@ html, body{
 
     .title{
 	font-weight: 600;
+	margin-bottom: 5px;
     }
     
     .sub-section{
 	float: left;
 	width: 100%;
-	margin: 10px 0px;
+	margin: 5px 0px;
 
 	.title{
 	    font-weight: 400;
@@ -523,4 +530,37 @@ ul.interests{
 div#interests-chart{
     float: left;
     width: 50%;
+}
+
+#footer{
+    float: left;
+    width: 100%;
+    margin-top: 5%;
+    padding: 5px 0px;
+    padding-top: 10px;
+    border-top: 1px #DDD solid;
+    text-align: center;
+
+    .quote{
+	float: left;
+	width: 100%;
+	font-size: 11pt;
+	color: #555;
+	font-weight: 400;
+	font-style: italic;
+
+	&::before, &::after{
+	    content: '"';
+	    font-size: 18pt;
+	    padding: 0px 10px;
+	}
+    }
+
+    .note{
+	float: left;
+	width: 100%;
+	font-size: 7pt;
+	padding: 5px 0px;
+	text-align: right;
+    }
 }
