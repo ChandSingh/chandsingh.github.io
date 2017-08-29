@@ -64,14 +64,23 @@ body {
   color: #FFF;
   padding: 3px 12px;
 }
-#whoami img.portrait {
-  margin: 0% 37.5%;
-  width: 25%;
+#whoami {
+  padding-top: 20px;
+}
+@media print {
+  #whoami {
+    padding-top: 0px;
+  }
 }
 #whoami .greeting {
   float: left;
   width: 100%;
   text-align: center;
+  background-image: url("../img/abhay.png");
+  background-repeat: no-repeat;
+  background-size: 225px auto;
+  background-position: top;
+  padding-top: 170px;
 }
 #whoami .greeting .highlight {
   background: #000;
@@ -108,10 +117,11 @@ body {
   width: 100%;
   text-align: center;
   margin: 5px 0px;
+  font-family: 'Arial';
 }
 #whoami .links a {
   font-size: 9pt;
-  line-height: 20px;
+  line-height: 30px;
   text-decoration: none;
   color: #666666;
   margin: 0px 10px;
@@ -289,7 +299,7 @@ body {
   margin: 5px 0px;
 }
 .section .sub-section .title {
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   font-size: 9pt;
   color: #000;
@@ -465,10 +475,16 @@ div#interests-chart {
   border-top: 1px #DDD solid;
   text-align: center;
 }
+@media print {
+  #footer {
+    margin-top: 3%;
+    padding-top: 5px;
+  }
+}
 #footer .quote {
   float: left;
   width: 100%;
-  font-size: 11pt;
+  font-size: 10pt;
   color: #555;
   font-weight: 400;
   font-style: italic;
@@ -476,7 +492,7 @@ div#interests-chart {
 #footer .quote::before,
 #footer .quote::after {
   content: '"';
-  font-size: 18pt;
+  font-size: 14pt;
   padding: 0px 10px;
 }
 #footer .note {
@@ -484,5 +500,5 @@ div#interests-chart {
   width: 100%;
   font-size: 7pt;
   padding: 5px 0px;
-  text-align: right;
+  text-align: center;
 }

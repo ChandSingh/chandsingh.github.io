@@ -64,16 +64,20 @@ html, body{
 }
 
 #whoami{
-
-    img.portrait{
-	margin: 0% 37.5%;
-	width: 25%;
+    padding-top: 20px;
+    @media print{
+	padding-top: 0px;
     }
-
+    
     .greeting{
 	float: left;
 	width: 100%;
 	text-align: center;
+	background-image: url("../img/abhay.png");
+	background-repeat: no-repeat;
+	background-size: 225px auto;
+	background-position: top;
+	padding-top: 170px;
 
 	.highlight{
 	    background: #000;
@@ -117,10 +121,11 @@ html, body{
 	width: 100%;
 	text-align: center;
 	margin: 5px 0px;
+	font-family: 'Arial';
 	
 	a{
 	    font-size: 9pt;
-	    line-height: 20px;
+	    line-height: 30px;
 	    text-decoration: none;
 	    color: lighten(@text, 40%);
 	    margin: 0px 10px;
@@ -339,7 +344,7 @@ html, body{
 	margin: 5px 0px;
 
 	.title{
-	    font-weight: 400;
+	    font-weight: 600;
 	    font-style: italic;
 	    font-size: 9pt;
 	    color: #000;
@@ -540,18 +545,22 @@ div#interests-chart{
     padding-top: 10px;
     border-top: 1px #DDD solid;
     text-align: center;
+    @media print{
+	margin-top: 3%;
+	padding-top: 5px;
+    }
 
     .quote{
 	float: left;
 	width: 100%;
-	font-size: 11pt;
+	font-size: 10pt;
 	color: #555;
 	font-weight: 400;
 	font-style: italic;
 
 	&::before, &::after{
 	    content: '"';
-	    font-size: 18pt;
+	    font-size: 14pt;
 	    padding: 0px 10px;
 	}
     }
@@ -561,6 +570,6 @@ div#interests-chart{
 	width: 100%;
 	font-size: 7pt;
 	padding: 5px 0px;
-	text-align: right;
+	text-align: center;
     }
 }
