@@ -78,31 +78,31 @@
 	    },
 
 	    series: [{
-		name: 'Blockchain',
+		name: '',
 		borderColor: '#333',
 		data: [{
 		    color: '#333',
 		    radius: '94%',
 		    innerRadius: '80%',
-		    y: 80
+		    y: 75
 		}]
 	    }, {
-		name: 'Data Engineering',
-		borderColor: '#666',
+		name: '',
+		borderColor: '#777',
 		data: [{
-		    color: '#666',
+		    color: '#777',
 		    radius: '79%',
 		    innerRadius: '65%',
 		    y: 65
 		}]
 	    }, {
-		name: 'Backend-Devel',
-		borderColor: '#999',
+		name: '',
+		borderColor: '#BBB',
 		data: [{
-		    color: '#999',
+		    color: '#BBB',
 		    radius: '64%',
 		    innerRadius: '50%',
-		    y: 50
+		    y: 55
 		}]
 	    }]
 
@@ -121,13 +121,13 @@
 		return [x,y];
 	    };
 
-	    var _pos1 = getCoordinates(chart, '-70%', '-75.0%');
+	    var _pos1 = getCoordinates(chart, '-69%', '-75.0%');
 	    var _pos2 = getCoordinates(chart, '-70%', '-62%');
-	    var _pos3 = getCoordinates(chart, '-81.5%', '-51%');
+	    var _pos3 = getCoordinates(chart, '-63%', '-51%');
 
 	    var _fontSize = Math.abs(Math.abs(_pos1[1] - _pos2[1]) - 2) + 'px';
 
-	    this.renderer.text('Blockchain')
+	    this.renderer.text('Data Engg')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
@@ -149,7 +149,7 @@
 		.translate(_pos2[0], _pos2[1])
 		.add(this.series[0].group);
 
-	    this.renderer.text('Development')
+	    this.renderer.text('Bots & AI')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
