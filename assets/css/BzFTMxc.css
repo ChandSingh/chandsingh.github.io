@@ -296,7 +296,12 @@ body {
 .section .sub-section {
   float: left;
   width: 100%;
-  margin: 5px 0px;
+  margin: 10px 0px;
+}
+@media print {
+  .section .sub-section {
+    margin: 5px 0px;
+  }
 }
 .section .sub-section .title {
   font-weight: 600;
@@ -332,6 +337,12 @@ ul.journey li {
   position: relative;
   float: left;
   width: 25%;
+  margin: 20px 0px;
+}
+@media print {
+  ul.journey li {
+    margin: 15px 0px;
+  }
 }
 ul.journey li::before {
   position: absolute;
@@ -498,7 +509,10 @@ div#interests-chart {
 #footer .note {
   float: left;
   width: 100%;
-  font-size: 7pt;
+  font-size: 8pt;
   padding: 5px 0px;
   text-align: center;
+}
+#footer .note a {
+  color: #000;
 }

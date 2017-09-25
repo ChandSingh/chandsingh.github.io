@@ -341,8 +341,12 @@ html, body{
     .sub-section{
 	float: left;
 	width: 100%;
-	margin: 5px 0px;
-
+	margin: 10px 0px;
+	
+	@media print{
+	    margin: 5px 0px;
+	}
+	
 	.title{
 	    font-weight: 600;
 	    font-style: italic;
@@ -383,7 +387,12 @@ ul.journey{
 	position: relative;
 	float: left;
 	width: 25%;
-
+	margin: 20px 0px;
+	
+	@media print{
+	    margin: 15px 0px;
+	}
+	
 	&::before{
 	    position: absolute;
 	    content: '';
@@ -568,8 +577,12 @@ div#interests-chart{
     .note{
 	float: left;
 	width: 100%;
-	font-size: 7pt;
+	font-size: 8pt;
 	padding: 5px 0px;
 	text-align: center;
+
+	a{
+	    color: #000;
+	}
     }
 }
