@@ -95,9 +95,10 @@ body {
 }
 #whoami .intro {
   text-align: right;
+  padding: 40px 0px;
 }
 #whoami .intro p {
-  padding: 20px 0px;
+  padding-top: 20px;
   font-style: italic;
   font-weight: 300;
   color: #CCC;
@@ -112,11 +113,11 @@ body {
   font-size: 14pt;
 }
 .split .split-left {
-  width: 28%;
+  width: 33%;
   padding-right: 2%;
 }
 .split .split-right {
-  width: 67%;
+  width: 62%;
   padding-left: 2%;
   border-left: 1px #EEE solid;
 }
@@ -201,7 +202,105 @@ ul.tags {
 }
 ul.tags li {
   float: left;
-  margin: 3px 5px;
-  padding: 3px 8px;
   background: #EEE;
+  margin: 3px 5px;
+  background: #F7F7F7;
+  color: #333;
+  padding: 3px 8px;
+}
+ul.tags li.int {
+  background: #EEE;
+  color: #111;
+}
+ul.tags li.pro {
+  background: #DDD;
+  color: #000;
+}
+.sub-section {
+  float: left;
+  width: 100%;
+  margin: 10px 0px;
+}
+@media print {
+  .sub-section {
+    margin: 5px 0px;
+  }
+}
+.sub-section .title {
+  font-style: italic;
+}
+ul.journey {
+  list-style: none;
+  float: left;
+  width: 100%;
+}
+ul.journey li {
+  position: relative;
+  float: left;
+  width: 20%;
+  margin: 5px 0px;
+}
+ul.journey li::before {
+  position: absolute;
+  content: '';
+  top: 30%;
+  left: 0;
+  width: 40%;
+  height: 0;
+  border-bottom: 1px #CCC dashed;
+  z-index: 0;
+}
+ul.journey li::after {
+  position: absolute;
+  content: '';
+  top: 30%;
+  right: 0;
+  width: 40%;
+  height: 0;
+  border-bottom: 1px #CCC dashed;
+  z-index: 0;
+}
+ul.journey li:last-child::before {
+  position: absolute;
+  content: '';
+  top: 15%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #333;
+}
+ul.journey li:last-child::after {
+  position: absolute;
+  content: '';
+  top: 15%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #999;
+}
+ul.journey li .milestone {
+  float: left;
+  width: 100%;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 8pt;
+  font-weight: 300;
+  color: #999;
+}
+ul.journey li .milestone::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 0%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  background: none;
+  border: solid 4px #000;
+  border-radius: 50%;
 }
