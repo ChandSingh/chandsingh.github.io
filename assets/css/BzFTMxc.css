@@ -95,7 +95,12 @@ body {
 }
 #whoami .intro {
   text-align: right;
-  padding: 40px 0px;
+  padding: 20px 0px;
+}
+@media print {
+  #whoami .intro {
+    padding: 15px 0px;
+  }
 }
 #whoami .intro p {
   padding-top: 20px;
@@ -111,6 +116,11 @@ body {
   font-weight: 300;
   color: #777;
   font-size: 14pt;
+}
+@media print {
+  #whoami .role p {
+    font-size: 12pt;
+  }
 }
 .split .split-left {
   width: 33%;
@@ -238,7 +248,7 @@ ul.journey li {
   position: relative;
   float: left;
   width: 20%;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 ul.journey li::before {
   position: absolute;
@@ -269,7 +279,7 @@ ul.journey li:last-child::before {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #333;
+  border-left: 5px solid #777;
 }
 ul.journey li:last-child::after {
   position: absolute;
@@ -285,22 +295,22 @@ ul.journey li:last-child::after {
 ul.journey li .milestone {
   float: left;
   width: 100%;
-  padding-top: 12px;
+  padding-top: 16px;
   text-align: center;
   font-size: 8pt;
-  font-weight: 300;
-  color: #999;
+  color: #333;
+  font-style: italic;
 }
 ul.journey li .milestone::after {
   content: '';
   position: absolute;
   width: 5px;
   height: 5px;
-  top: 0%;
+  top: 1px;
   margin: 0px auto;
   left: 0;
   right: 0;
   background: none;
-  border: solid 4px #000;
+  border: solid 4px #555;
   border-radius: 50%;
 }
