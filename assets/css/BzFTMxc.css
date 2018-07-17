@@ -62,14 +62,20 @@ body {
 #whoami {
   padding-top: 20px;
   border-bottom: 1px #eee solid;
+  padding-top: 40px;
+}
+#whoami .l {
+  float: left;
+  width: 50%;
+}
+#whoami .r {
+  float: left;
+  width: 50%;
 }
 @media print {
   #whoami {
     padding-top: 0px;
   }
-}
-#whoami .greeting {
-  padding-top: 50px;
 }
 #whoami .greeting .highlight {
   background: #000;
@@ -86,6 +92,15 @@ body {
 #whoami .greeting h1 {
   font-weight: 300;
   font-size: 44pt;
+}
+#whoami .intro {
+  text-align: right;
+}
+#whoami .intro p {
+  padding: 20px 0px;
+  font-style: italic;
+  font-weight: 300;
+  color: #CCC;
 }
 #whoami .role {
   padding: 10px 0px;
@@ -132,4 +147,61 @@ body {
   text-align: right;
   font-size: 7pt;
   padding: 1px 0px;
+}
+.timeline {
+  float: left;
+  width: 100%;
+  padding: 10px 0px;
+}
+.timeline .row {
+  float: left;
+  width: 100%;
+  margin: 10px 0px;
+}
+.timeline .row .time {
+  float: left;
+  width: 20%;
+  text-align: right;
+}
+.timeline .row .time div {
+  float: left;
+  width: 100%;
+}
+.timeline .row .time .t {
+  font-style: italic;
+  padding: 5px 0px;
+}
+.timeline .row .time .td {
+  font-weight: bold;
+}
+.timeline .row .time .loc {
+  font-size: 8pt;
+  font-weight: 300;
+}
+.timeline .row .event {
+  float: left;
+  width: 75%;
+  padding-left: 5%;
+}
+.timeline .row .event div {
+  float: left;
+  width: 100%;
+}
+.timeline .row .event .e {
+  font-weight: bold;
+  padding: 5px 0px;
+}
+ul.tags {
+  float: left;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 8pt;
+}
+ul.tags li {
+  float: left;
+  margin: 3px 5px;
+  padding: 3px 8px;
+  background: #EEE;
 }

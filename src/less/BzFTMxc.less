@@ -68,15 +68,26 @@ html, body{
 
 
 #whoami{
+
+    .l{
+	float: left;
+	width: 50%;
+    }
+    
+    .r{
+	float: left;
+	width: 50%;
+    }
+    
     padding-top: 20px;
     @media print{
 	padding-top: 0px;
     }
 
     border-bottom: 1px #eee solid;
+    padding-top: 40px;
     
     .greeting{
-	padding-top: 50px;
 
 	.highlight{
 	    background: #000;
@@ -98,6 +109,18 @@ html, body{
 	}
 	
     }
+
+    .intro {
+	text-align: right;
+
+	p {
+	    padding: 20px 0px;
+	    font-style: italic;
+	    font-weight: 300;
+	    color: #CCC;
+	}
+    }
+
 
     .role{
 	padding: 10px 0px;
@@ -158,5 +181,79 @@ html, body{
 	font-size: 7pt;
 	padding: 1px 0px;
     }
+}
 
+.timeline{
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+
+    .row{
+	float: left;
+	width: 100%;
+	margin: 10px 0px;
+
+	.time{
+	    float: left;
+	    width: 20%;
+	    text-align: right;
+
+	    div{
+		float: left;
+		width: 100%;
+	    }
+
+	    .t{
+		font-style: italic;
+		padding: 5px 0px;
+	    }
+	    .td{
+		font-weight: bold;
+	    }
+	    
+	    .loc{
+		font-size: 8pt;
+		font-weight: 300;
+	    }
+	    
+	}
+
+	.event{
+	    float: left;
+	    width: 75%;
+	    padding-left: 5%;
+
+	    div{
+		float: left;
+		width: 100%;
+	    }
+
+	    
+	    .e{
+		font-weight: bold;
+		padding: 5px 0px;
+	    }
+
+	    .ec{
+	    }
+	    
+	}
+	
+    }
+}
+
+ul.tags{
+    float: left;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 8pt;
+
+    li {
+	float: left;
+	margin: 3px 5px;
+	padding: 3px 8px;
+	background: #EEE;
+    }
 }
