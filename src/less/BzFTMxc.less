@@ -1,5 +1,6 @@
 @import 'src/less/BzFTMxc-theme.less';
 
+
 body, h1, h2, h3, h4, h5, h6, ul, li{
     padding: 0px;
     margin: 0px;
@@ -17,17 +18,19 @@ html, body{
     width: 100%;
 }
 
-.page{
+.fl{
+    float: left;
+}
+
+.fw{
     width: 100%;
+}
+
+.page{
     max-width: 1100px;
     margin: 0px auto;
 }
 
-.space{
-    float: left;
-    width: 100%;
-    padding: 15px 0px;
-}
 
 .text-center{
     text-align: center;
@@ -63,21 +66,17 @@ html, body{
     padding: 3px 12px;
 }
 
+
 #whoami{
     padding-top: 20px;
     @media print{
 	padding-top: 0px;
     }
+
+    border-bottom: 1px #eee solid;
     
     .greeting{
-	float: left;
-	width: 100%;
-	text-align: center;
-	background-image: url("../img/abhay.png");
-	background-repeat: no-repeat;
-	background-size: 225px auto;
-	background-position: top;
-	padding-top: 170px;
+	padding-top: 50px;
 
 	.highlight{
 	    background: #000;
@@ -90,499 +89,74 @@ html, body{
 	
 	h3{
 	    font-weight: 300;
-	    font-size: 24pt;
+	    font-size: 22pt;
 	}
 	
 	h1{
 	    font-weight: 300;
-	    font-size: 42pt;
+	    font-size: 44pt;
 	}
 	
     }
 
-    .highlights{
-	float: left;
-	width: 100%;
-	text-align: center;
-	margin: 5px 0px;
-	
-	.highlight{
-	    padding: 5px 15px;
-	    margin: 0px 8px;
-	    background: #EEE;
-	    color: #000;
-	    font-weight: 400;
-	    font-size: 10pt;
-	}
-    }
-
-    .links{
-	float: left;
-	width: 100%;
-	text-align: center;
-	margin: 5px 0px;
-	font-family: 'Arial';
-	
-	a{
-	    font-size: 9pt;
-	    line-height: 30px;
-	    text-decoration: none;
-	    color: lighten(@text, 40%);
-	    margin: 0px 10px;
-
-	    img{
-		height: 13px;
-		margin-right: 5px;
-	    }
-
-	    &:hover{
-		color: @text;
-		text-decoration: underline;
-	    }
-	}
-    }
-    
-}
-
-#timeline{
-    background: @timeline-background;
-    color: @timeline-text;
-    padding-top: 30px;
-}
-
-
-.timeline{
-
-    float: left;
-    width: 100%;
-    
-    .block{
-	position: relative;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 135px;
-
-	&.short{
-	    height: 100px;
-	}
-
-	&.large{
-	    height: 550px;
-	}
-
-	&::before{
-	    content: '';
-	    position: absolute;
-	    width: 0%;
-	    height: 90%;
-	    margin: 0px auto;
-	    top: 16px;
-	    left: 0;
-	    right: 0;
-	    background: none;
-	    border-right: dotted 2px @timeline-line-color;
-	    opacity: .7;
-	}
-
-	&.large::before{
-	    height: 95%;
-	}
-
-	&.solid::before{
-	    border-right: solid 2px @timeline-line-color;
-	}
-
-	&.dashed::before{
-	    border-right: dashed 2px @timeline-line-color;
-	}
-
-	&::after{
-	    content: '';
-	    position: absolute;
-	    width: 8px;
-	    height: 8px;
-	    top: 0%;
-	    margin: 0px auto;
-	    left: 0;
-	    right: 0;
-	    background: none;
-	    border: solid 4px @timeline-point-color;
-	    border-radius: 50%;
-	}
-
-	&.solid::after{
-	    background: @timeline-point-color;
-	}
-
-	.left{
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 47%;
-	    padding-right: 3%;
-	    text-align: right;
-	    .time{
-		text-align: right;
-	    }
-	    .image{
-		img{
-		    float: right;
-		}
-	    }
-	    .content{
-		text-align: right;
-	    }
-	    ul{
-		li{
-		    float: right;
-		}
-	    }
-	}
-
-	.right{
-	    position: absolute;
-	    top: 0;
-	    left: 50%;
-	    width: 47%;
-	    padding-left: 3%;
-	    text-align: left;
-	    .time{
-		text-align: left;
-	    }
-	    .image{
-		img{
-		    float: left;
-		}
-	    }
-	    .content{
-		text-align: left;
-	    }
-	    ul{
-		li{
-		    float: left;
-		}
-	    }
-	}
-
-	.time{
-	    float: left;
-	    width: 100%;
-	    margin-bottom: 10px;
-	    font-weight: 600;
-	    font-style: italic;
-	}
-
-	.content{
-	    float: left;
-	    width: 100%;
-	    font-size: 0.95em;
-
-	    h3 {
-		font-weight: 300;
-		font-style: italic;
-	    }
-
-	    strong {
-		font-weight: 300;
-		display: block;
-	    }
-
-	    a{
-		font-size: 10pt;
-		color: lighten(@text, 50%);
-		text-decoration: none;
-		
-		&:hover{
-		    color: lighten(@text, 20%);
-		    text-decoration: underline;
-		}
-	    }
-
-	    p{
-		margin: 10px 0px;
-		color: lighten(@text, 30%);
-	    }
-
-	    ul.skills{
-		float: left;
-		width: 100%;
-		list-style: none;
-
-		li{
-		    font-weight: 300;
-		    font-size: 0.8em;
-		    padding: 3px 8px;
-		    margin: 3px 5px;
-		    background: #EEE;
-		}
-	    }
-
-	}
-	
-    }
-   
-}
-
-.section{
-    float: left;
-    width: 100%;
-    margin: 10px 0px;
-
-    @media print{
-	margin: 10px 0px;
-    }
-
-    .title{
-	font-weight: 600;
-	margin-bottom: 5px;
-    }
-    
-    .sub-section{
-	float: left;
-	width: 100%;
-	margin: 10px 0px;
-	
-	@media print{
-	    margin: 5px 0px;
-	}
-	
-	.title{
-	    font-weight: 600;
-	    font-style: italic;
-	    font-size: 9pt;
-	    color: #000;
-	}
-    }
-
-    ul.technologies{
-	list-style: none;
-	margin: 5px 0px;
-
-	li{
-	    margin: 3px 5px;
-	    font-size: 8pt;
-	    background: #F7F7F7;
-	    color: #333;
-	    padding: 3px 8px;
-
-	    &.int{
-		background: #EEE;
-		color: #111;
-	    }
-	    &.pro{
-		background: #DDD;
-		color: #000;
-	    }
-	}
-    }
-}
-
-ul.journey{
-    list-style: none;
-    float: left;
-    width: 100%;
-
-    li{
-	position: relative;
-	float: left;
-	width: 25%;
-	margin: 20px 0px;
-	
-	@media print{
-	    margin: 15px 0px;
-	}
-	
-	&::before{
-	    position: absolute;
-	    content: '';
-	    top: 40%;
-	    left: 0;
-	    width: 30%;
-	    height: 0;
-	    border-bottom: 1px #CCC dotted;
-	    z-index: 0;
-	}
-	&:first-child::before{
-	    border-bottom: 1px #CCC dashed;
-	}
-	
-	&::after{
-	    position: absolute;
-	    content: '';
-	    top: 40%;
-	    right: 0;
-	    width: 30%;
-	    height: 0;
-	    border-bottom: 1px #CCC dotted;
-	    z-index: 0;
-	}
-
-	
-	&:last-child::before{
-	    position: absolute;
-	    content: '';
-	    top: 35%;
-	    left: 0;
-	    width: 0;
-	    height: 0;
-	    border-top: 5px solid transparent;
-	    border-bottom: 5px solid transparent;
-	    border-left: 5px solid #333;
-	}
-	&:last-child::after{
-	    position: absolute;
-	    content: '';
-	    top: 35%;
-	    left: 10px;
-	    width: 0;
-	    height: 0;
-	    border-top: 5px solid transparent;
-	    border-bottom: 5px solid transparent;
-	    border-left: 5px solid #999;
-	}
-
-	.milestone{
-	    float: left;
-	    width: 100%;
-	    padding: 0%;
-	    text-align: center;
-
-	    .image{
-		float: left;
-		width: 40%;
-		margin: 5% 30%;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: auto 100%;
-		border-radius: 50%;
-	    }
-
-	    b{
-		font-weight: 300;
-		font-size: 9pt;
-		color: #777;
-
-		@media print{
-		    font-size: 8pt;
-		}
-	    }
-	}
-    }
-}
-
-ul.education{
-    list-style: none;
-    float: left;
-    width: 100%;
-    padding: 5px 0px;
-
-    li{
-	float: left;
-	width: 100%;
+    .role{
 	padding: 10px 0px;
-    }
-
-    .learning{
-	float: left;
-	width: 100%;
-
-	.year{
-	    font-weight: 600;
-	    font-style: italic;
-	    font-size: 10pt;
-	}
-
-	.course{
-	    font-size: 11pt;
-	    font-weight: 100;
-	    font-style: italic;
-	    color: #333;
-	    margin: 2px 0px;
-
-	    .field{
-		color: #555;
-	    }
-	}
-
-	.institution{
-	    font-size: 9pt;
+	
+	p {
+	    text-transform: uppercase;
+	    font-weight: 300;
 	    color: #777;
-	    font-weight: 100;
+	    font-size: 14pt;
 	}
     }
 }
 
-div#interests{
-    float: left;
-    width: 50%;
-}
 
-ul.interests{
-    list-style: none;
-    margin: 50px 0px;
+.split{
 
-    li{
-	float: left !important;
-	margin: 3px 5px;
-	font-size: 9pt;
-	background: #F7F7F7;
-	color: #333;
-	padding: 3px 8px;
-
-	&.int{
-	    background: #EEE;
-	    color: #111;
-	}
-	&.pro{
-	    background: #DDD;
-	    color: #000;
-	}
+    .split-left {
+	width: 28%;
+	padding-right: 2%;
     }
+
+    .split-right {
+	width: 67%;
+	padding-left: 2%;
+	border-left: 1px #EEE solid;
+    }
+    
 }
 
-div#interests-chart{
-    float: left;
-    width: 50%;
-}
-
-#footer{
+.section {
     float: left;
     width: 100%;
-    margin-top: 5%;
-    padding: 5px 0px;
-    padding-top: 10px;
-    border-top: 1px #DDD solid;
-    text-align: center;
-    @media print{
-	margin-top: 3%;
-	padding-top: 5px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+    &.wb{
+	border-bottom: 1px #EEE solid;
     }
 
-    .quote{
+    .head {
+	float: left;
+	width: 100%;
+	font-size: 11pt;
+	text-transform: uppercase;
+    }
+
+    .content {
 	float: left;
 	width: 100%;
 	font-size: 10pt;
-	color: #555;
-	font-weight: 400;
-	font-style: italic;
-
-	&::before, &::after{
-	    content: '"';
-	    font-size: 14pt;
-	    padding: 0px 10px;
-	}
+	padding: 3px 0px;
     }
 
-    .note{
+    .foot {
 	float: left;
 	width: 100%;
-	font-size: 8pt;
-	padding: 5px 0px;
-	text-align: center;
-
-	a{
-	    color: #000;
-	}
+	text-align: right;
+	font-size: 7pt;
+	padding: 1px 0px;
     }
+
 }
