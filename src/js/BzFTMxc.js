@@ -1,21 +1,14 @@
- // BzFTMxc.js
+// BzFTMxc.js
 
 
 (function(_W, _D){
-
-    var makeSquare = function(elements){
-	for (var i = 0; i < elements.length; i ++) {
-	    elements[i].setAttribute('height', elements[i].offsetWidth);
-	    elements[i].style.height = elements[i].offsetWidth + 'px';
-	}
-    };
 
     var renderChart = function(print){
 	Highcharts.chart('interests-chart', {
 
 	    chart: {
 		type: 'solidgauge',
-		height: '220px'
+		height: print ? '210px' : '250px'
 	    },
 
 	    title: {
@@ -122,8 +115,8 @@
 	    };
 
 	    var _pos1 = getCoordinates(chart, '-69%', '-75.0%');
-	    var _pos2 = getCoordinates(chart, '-70%', '-62%');
-	    var _pos3 = getCoordinates(chart, '-63%', '-51%');
+	    var _pos2 = getCoordinates(chart, '-82%', '-62%');
+	    var _pos3 = getCoordinates(chart, '-55%', '-51%');
 
 	    var _fontSize = Math.abs(Math.abs(_pos1[1] - _pos2[1]) - 2) + 'px';
 
@@ -138,7 +131,7 @@
 		.translate(_pos1[0], _pos1[1])
 		.add(this.series[0].group);
 
-	    this.renderer.text('Blockchain')
+	    this.renderer.text('Backend Dev')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
@@ -149,7 +142,7 @@
 		.translate(_pos2[0], _pos2[1])
 		.add(this.series[0].group);
 
-	    this.renderer.text('Bots & AI')
+	    this.renderer.text('DevOps')
 		.attr({
 		    'stroke-width': 1,
 		    'zIndex': 10
@@ -165,22 +158,16 @@
     
     _D.addEventListener('DOMContentLoaded', function(e){
 
-	// Make elements square
-	var square_elems = _D.getElementsByClassName('square');
-	makeSquare(square_elems);
-
 	// Render chart
 	renderChart();
 
 	// Add event listener for screen re-size
 	_W.addEventListener('resize', function(e){
-	    makeSquare(square_elems);
 	    renderChart();
 	});
 	
 	// Invoke before printing
 	var printing = function(){
-	    makeSquare(square_elems);
 	    renderChart(true);
 	};	
 	if (window.matchMedia) {
@@ -192,4 +179,3 @@
     });
     
 })(window, window.document);
-
