@@ -95,11 +95,11 @@ body {
 }
 #whoami .intro {
   text-align: right;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 @media print {
   #whoami .intro {
-    padding: 15px 0px;
+    padding: 5px 0px;
   }
 }
 #whoami .intro p {
@@ -107,6 +107,29 @@ body {
   font-style: italic;
   font-weight: 300;
   color: #CCC;
+}
+@media print {
+  #whoami .intro p {
+    padding-top: 10px;
+  }
+}
+#whoami .quick-connect {
+  text-align: right;
+}
+#whoami .quick-connect a {
+  font-size: 9pt;
+  line-height: 30px;
+  text-decoration: none;
+  margin: 0px 10px;
+  color: #999;
+}
+#whoami .quick-connect a img {
+  height: 13px;
+  margin-right: 5px;
+}
+#whoami .quick-connect a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 #whoami .role {
   padding: 10px 0px;
@@ -123,11 +146,11 @@ body {
   }
 }
 .split .split-left {
-  width: 33%;
+  width: 28%;
   padding-right: 2%;
 }
 .split .split-right {
-  width: 62%;
+  width: 67%;
   padding-left: 2%;
   border-left: 1px #EEE solid;
 }
@@ -164,14 +187,24 @@ body {
   width: 100%;
   padding: 10px 0px;
 }
+@media print {
+  .timeline {
+    padding: 5px 0px;
+  }
+}
 .timeline .row {
   float: left;
   width: 100%;
   margin: 10px 0px;
 }
+@media print {
+  .timeline .row {
+    margin: 3px 0px;
+  }
+}
 .timeline .row .time {
   float: left;
-  width: 20%;
+  width: 21%;
   text-align: right;
 }
 .timeline .row .time div {
@@ -191,8 +224,8 @@ body {
 }
 .timeline .row .event {
   float: left;
-  width: 75%;
-  padding-left: 5%;
+  width: 76%;
+  padding-left: 3%;
 }
 .timeline .row .event div {
   float: left;
@@ -229,11 +262,13 @@ ul.tags li.pro {
 .sub-section {
   float: left;
   width: 100%;
-  margin: 10px 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media print {
   .sub-section {
-    margin: 5px 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
   }
 }
 .sub-section .title {
@@ -313,4 +348,27 @@ ul.journey li .milestone::after {
   background: none;
   border: solid 4px #555;
   border-radius: 50%;
+}
+ul.certifications {
+  list-style: none;
+  padding: 0px;
+  margin: 20px 0px;
+}
+ul.certifications li {
+  float: left;
+  width: 23%;
+  padding: 1%;
+}
+ul.certifications li b {
+  font-weight: 400;
+}
+ul.certifications li p {
+  margin: 0px;
+  margin-top: 2px;
+  font-size: 8pt;
+  font-weight: 300;
+}
+#interests-chart {
+  float: left;
+  width: 100%;
 }
