@@ -8,7 +8,7 @@
 
 	    chart: {
 		type: 'solidgauge',
-		height: '220px'
+		height: print ? '210px' : '250px'
 	    },
 
 	    title: {
