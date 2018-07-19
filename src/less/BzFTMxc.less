@@ -44,6 +44,15 @@ html, body{
     text-align: right;
 }
 
+
+.print{
+    display: none !important;
+
+    @media print {
+	display: inline !important;
+    }
+}
+
 @media print{
     .no-print, .no-print *{
 	display: none !important;
@@ -466,7 +475,7 @@ ul.certifications{
 .portfolio{
     float: left;
     width: 94%;
-    padding: 20px 3%;
+    padding: 20px 4%;
 
     @media print {
 	padding: 10px 2%;
@@ -513,6 +522,10 @@ ul.certifications{
 	width: 100%;
 	padding: 5px 0px;
 
+	@media print {
+	    padding: 3px 0px;
+	}
+
 	b {
 	    font-style: italic;
 	}
@@ -522,3 +535,36 @@ ul.certifications{
 	}
     }
 }
+
+#footer {
+    border-top: 1px #EEE solid;
+
+    .links{
+	float: left;
+	width: 100%;
+	text-align: center;
+
+	a {
+	    font-size: 9pt;
+	    line-height: 30px;
+	    text-decoration: none;;
+	    margin: 0px 8px;
+	    color: #999;
+
+	    img{
+		height: 13px;
+		margin-right: 5px;
+	    }
+
+	    &:hover{
+		color: #000;
+		text-decoration: underline;
+	    }
+	}
+	
+	
+    }
+
+}
+
+
