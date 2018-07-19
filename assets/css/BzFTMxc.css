@@ -40,6 +40,14 @@ body {
 .text-right {
   text-align: right;
 }
+.print {
+  display: none !important;
+}
+@media print {
+  .print {
+    display: inline !important;
+  }
+}
 @media print {
   .no-print,
   .no-print * {
@@ -143,6 +151,15 @@ body {
   #whoami .role p {
     font-size: 12pt;
   }
+}
+.split .split-even {
+  width: 48%;
+}
+.split .split-even .l {
+  padding-right: 2%;
+}
+.split .split-even .r {
+  padding-left: 2%;
 }
 .split .split-left {
   width: 28%;
@@ -370,4 +387,93 @@ ul.certifications li p {
 #interests-chart {
   float: left;
   width: 100%;
+}
+.pb {
+  float: left;
+  width: 100%;
+  border-top: 1px #EEE solid;
+}
+@media print {
+  .pb {
+    border-top: none;
+    page-break-after: always;
+  }
+}
+.portfolio {
+  float: left;
+  width: 94%;
+  padding: 20px 4%;
+}
+@media print {
+  .portfolio {
+    padding: 10px 2%;
+  }
+}
+.portfolio .project {
+  float: left;
+  width: 100%;
+  margin: 14px 0px;
+}
+@media print {
+  .portfolio .project {
+    margin: 7px 0px;
+  }
+}
+.portfolio .project .p {
+  font-weight: bold;
+  font-size: 12pt;
+}
+.portfolio .project .c {
+  color: #777;
+}
+.portfolio .project .d {
+  padding: 5px 0px;
+}
+.portfolio .project .d ul {
+  padding-left: 5%;
+}
+.about {
+  float: left;
+  width: 100%;
+  padding: 10px 0px;
+}
+.about .a {
+  float: left;
+  width: 100%;
+  padding: 5px 0px;
+}
+@media print {
+  .about .a {
+    padding: 3px 0px;
+  }
+}
+.about .a b {
+  font-style: italic;
+}
+.about .a p {
+  margin: 0px;
+  padding: 0px;
+}
+#footer {
+  border-top: 1px #EEE solid;
+}
+#footer .links {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+#footer .links a {
+  font-size: 9pt;
+  line-height: 30px;
+  text-decoration: none;
+  margin: 0px 8px;
+  color: #999;
+}
+#footer .links a img {
+  height: 13px;
+  margin-right: 5px;
+}
+#footer .links a:hover {
+  color: #000;
+  text-decoration: underline;
 }

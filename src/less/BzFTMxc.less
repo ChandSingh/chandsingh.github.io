@@ -44,6 +44,15 @@ html, body{
     text-align: right;
 }
 
+
+.print{
+    display: none !important;
+
+    @media print {
+	display: inline !important;
+    }
+}
+
 @media print{
     .no-print, .no-print *{
 	display: none !important;
@@ -169,6 +178,16 @@ html, body{
 
 
 .split{
+
+    .split-even {
+	width: 48%;
+	.l{
+	    padding-right: 2%;
+	}
+	.r{
+	    padding-left: 2%;
+	}
+    }
 
     .split-left {
 	width: 28%;
@@ -441,3 +460,111 @@ ul.certifications{
     float: left;
     width: 100%;
 }
+
+.pb{
+    float: left;
+    width: 100%;
+    border-top: 1px #EEE solid;
+
+    @media print {
+	border-top: none;
+    	page-break-after: always;
+    }
+}
+
+.portfolio{
+    float: left;
+    width: 94%;
+    padding: 20px 4%;
+
+    @media print {
+	padding: 10px 2%;
+    }
+
+    .project{
+	float: left;
+	width: 100%;
+	margin: 14px 0px;
+
+	@media print {
+	    margin: 7px 0px;
+	}
+
+	.p {
+	    font-weight: bold;
+	    font-size: 12pt;
+	}
+
+	.c {
+	    color: #777;
+	}
+
+	.d {
+	    padding: 5px 0px;
+
+	    ul {
+		padding-left: 5%;
+	    }
+	}
+	
+	
+    }
+    
+}
+
+.about{
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+
+    .a{
+	float: left;
+	width: 100%;
+	padding: 5px 0px;
+
+	@media print {
+	    padding: 3px 0px;
+	}
+
+	b {
+	    font-style: italic;
+	}
+	p {
+	    margin: 0px;
+	    padding: 0px;
+	}
+    }
+}
+
+#footer {
+    border-top: 1px #EEE solid;
+
+    .links{
+	float: left;
+	width: 100%;
+	text-align: center;
+
+	a {
+	    font-size: 9pt;
+	    line-height: 30px;
+	    text-decoration: none;;
+	    margin: 0px 8px;
+	    color: #999;
+
+	    img{
+		height: 13px;
+		margin-right: 5px;
+	    }
+
+	    &:hover{
+		color: #000;
+		text-decoration: underline;
+	    }
+	}
+	
+	
+    }
+
+}
+
+
